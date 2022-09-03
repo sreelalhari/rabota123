@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <div class="col-md-8 offset-md-2 bg-light">
+        <h1>{{ job.title }}</h1>
+        <medium>
+            {{ job.company_name }} | {{ job.ratings }} rating, {{ job.reviews }}
+        </medium>
+        </br>
+        </br></br>
+        <a href="{{ job.url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Apply Now</a>
+        <hr>
+	    <p>{{job.skills | safe | linebreaks }}</p>
+        </br>
+        <hr>
+        <p>{{ job.experience | safe | linebreaks }}</p>
+        </br>
+        <hr>
+        <p>{{ job.posted | safe | linebreaks }}</p>
+        </br>
+
+    </div>
+{% endblock %}
